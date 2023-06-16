@@ -1,4 +1,4 @@
-# UFC Machine Learning
+# UFC Fighter Data
 
 ## Scraping
 
@@ -20,3 +20,7 @@ Using BeautifulSoup we scrape the fighter data from the [UFCStats](http://ufcsta
 
 [4040 rows x 10 columns]
 ```
+
+## Data Pre-processing
+
+We clean the data, convert US unit to metric, remove fighter with no weight and one outlier.
