@@ -24,3 +24,7 @@ Using BeautifulSoup we scrape the fighter data from the [UFCStats](http://ufcsta
 ## Data Pre-processing
 
 We clean the data, convert US unit to metric, remove fighter with no weight and one outlier.
+
+## Visualisation
+
+We use matplotlib to visualize our data
