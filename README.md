@@ -20,10 +20,27 @@ Using BeautifulSoup we scrape the fighter data from the [UFCStats](http://ufcsta
 
 [4040 rows x 10 columns]
 ```
+And the fight data since UFC2:
+```
+                          Event            Date                Winner             Loser Knockdown # W Knockdown # L  ... Submission # L           Weightclass  Result           Method Round   Time
+0     UFC 289: Nunes vs. Aldana   June 10, 2023          Amanda Nunes      Irene Aldana             0             0  ...              0  Women's Bantamweight   U-DEC            U-DEC     5   5:00
+1     UFC 289: Nunes vs. Aldana   June 10, 2023      Charles Oliveira    Beneil Dariush             1             0  ...              0           Lightweight  KO/TKO          Punches     1   4:10
+2     UFC 289: Nunes vs. Aldana   June 10, 2023           Mike Malott       Adam Fugitt             1             0  ...              0          Welterweight     SUB  GuillotineChoke     2   1:06
+3     UFC 289: Nunes vs. Aldana   June 10, 2023               Dan Ige     Nate Landwehr             1             0  ...              0         Featherweight   U-DEC            U-DEC     3   5:00
+4     UFC 289: Nunes vs. Aldana   June 10, 2023  Marc-Andre Barriault       Eryk Anders             1             0  ...              0          Middleweight   U-DEC            U-DEC     3   5:00
+...                         ...             ...                   ...               ...           ...           ...  ...            ...                   ...     ...              ...   ...    ...
+7162          UFC 2: No Way Out  March 11, 1994          Orlando Wiet  Robert Lucarelli             0             0  ...              1           Open Weight  KO/TKO           KO/TKO     1   2:50
+7163          UFC 2: No Way Out  March 11, 1994         Frank Hamaker   Thaddeus Luster             0             0  ...              0           Open Weight     SUB          Keylock     1   4:52
+7164          UFC 2: No Way Out  March 11, 1994         Johnny Rhodes     David Levicki             0             0  ...              0           Open Weight  KO/TKO          Punches     1  12:13
+7165          UFC 2: No Way Out  March 11, 1994         Patrick Smith        Ray Wizard             0             0  ...              0           Open Weight     SUB  GuillotineChoke     1   0:58
+7166          UFC 2: No Way Out  March 11, 1994          Scott Morris    Sean Daugherty             0             0  ...              0           Open Weight     SUB  GuillotineChoke     1   0:20
+
+[7167 rows x 17 columns]
+```
 
 ## Data Pre-processing
 
-We clean the data, convert US unit to metric, remove fighter with no weight and one outlier.
+We clean the data, convert US units to metric, remove 90 fighters with missing weight and one outlier.
 
 ## Visualisation
 
