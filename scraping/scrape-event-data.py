@@ -70,6 +70,7 @@ def scrape_fight_data(event_url):
                 event_name,
                 event_date,
                 winner,
+                fighter1,
                 fighter2,
                 kd_f1,
                 kd_f2,
@@ -90,26 +91,29 @@ def scrape_fight_data(event_url):
 
 
 def create_df():
-    fights = []
+    """ """
+    all_fights = []
     for event in get_event_urls():
         event_fights = scrape_fight_data(event)
-        fights = fights + event_fights
+        all_fights = all_fights + event_fights
+        print(event_fights[0][0])
 
     df = pd.DataFrame(
-        fights,
+        all_fights,
         columns=[
             "Event",
             "Date",
             "Winner",
-            "Loser",
-            "Knockdown # W",
-            "Knockdown # L",
-            "Stike # W",
-            "Strike # L",
-            "Takedown # W",
-            "Takedown # L",
-            "Submission # W",
-            "Submission # L",
+            "Fighter 1",
+            "Fighter 2",
+            "F1 Knockdown",
+            "F2 Knockdown",
+            "F1 Stike",
+            "F2 Strike",
+            "F1 Takedown",
+            "F2 Takedown",
+            "F1 Submission",
+            "F2 Submission",
             "Weightclass",
             "Result",
             "Method",
@@ -123,7 +127,7 @@ def create_df():
 
 def main():
     df = create_df()
-    df.to_csv("fights.csv", sep=",")
+    df.to_csv("events.csv", sep=",")
 
 
 if __name__ == "__main__":
