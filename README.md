@@ -67,3 +67,5 @@ Several notebooks explore and visualize interesting patterns in the data
 
 Machine learning to predict winner of future fights.  
 `fight-prediction-baseline-model.ipynb` contains a simple baseline model to predict the winner of a fight: 58% accuracy.
+`fight-prediction-random-forest-log-regression-model.ipynb` contains two classification models to predict the winner of a fight with a 66% accuracy.
+
